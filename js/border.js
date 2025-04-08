@@ -1,10 +1,9 @@
-const main = document.getElementById("main")
-const id = new URLSearchParams(location.search).get("id")
+const borderDiv = document.getElementById('borderDiv')
+const cca3 = new URLSearchParams(location.search).get("cca3")
 
-function detailShow() {
-
-const item = data.find(elem => elem.id == id)
-  main.innerHTML = `
+function showBorders() {
+  const item = data.find(elem => elem.cca3 === cca3)
+  borderDiv.innerHTML = `
     <div class="my-[100px] mx-[50px] p-[20px] dark:bg-gray-100 rounded-[8px]">
       <div rel="noopener noreferrer" href="#" class="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50">
         <img src="${item.flags.png}" alt="" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
@@ -21,10 +20,11 @@ const item = data.find(elem => elem.id == id)
             const bordered = data.find(el => el.cca3 === cca3);
               return `<a href="../pages/border.html?cca3=${bordered.cca3}" class="p-2 inline-block rounded-[15px] bg-indigo-300 hover:scale-110">${cca3}</a>`;
           })          
-          .join(' ')}          
+          .join(' ')}     
           </p>
           <p class="my-3 p-2 bg-gray-200 rounded-[8px]">Languages: <br>${Object.values(item.languages).join(' ')}</p>
         </div>
       </div>
-    </div>`
+    </div>
+`
 }

@@ -9,8 +9,7 @@
 <body>
   <header class="p-4 dark:bg-gray-100 dark:text-gray-800">
     <div class="container flex justify-center items-center h-16 mx-auto">
-      <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
-      </a>
+      
       <ul class="items-stretch hidden space-x-3 lg:flex">
         <li class="flex">
           <a rel="noopener noreferrer" href="/pages/navbar.html?region=Africa" class="flex items-center px-4 -mb-1">Africa</a>
@@ -45,7 +44,17 @@
       </button>
     </div>
   </header>
-  <main id="main"></main>
+  <main>
+    <section class="py-6 sm:py-10 bg-[#e5e7eb] dark:text-gray-800 ">
+      <div id="topElem" class="container p-6 mx-auto space-y-8">
+        <div class="space-y-2 text-center">
+          <h2 class="text-5xl font-bold" id="adlar"></h2>
+        </div>
+        <div id="regions" class="grid grid-cols-1 gap-x-4 gap-y-8  py-[50px] md:grid-cols-2 lg:grid-cols-4">
+        </div>
+      </div>
+    </section>  
+  </main>
   <footer class="px-4 py-8 dark:bg-gray-100 dark:text-gray-600">
     <div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
       <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
@@ -78,6 +87,6 @@
   </footer>
   <script src="../js/db.json"></script>
   <script src="../js/data.js"></script>
-  <script src="../js/detail.js"></script>
+  <script src="../js/navbar.js"></script>
 </body>
 </html>
